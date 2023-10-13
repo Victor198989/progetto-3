@@ -86,23 +86,23 @@ console.log(maggiore);
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
 
-/*let str = "I love coding";
+let str = "I love coding";
 let arr = str.split(" ");
-console.log(arr);
-*/
-
-function splitMe() {
-  let stringa = "i love coding";
-  let arr = stringa.split(" ");
-  return arr;
-}
-
 console.log(arr);
 
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
+
+/*const deleteOne = ( str, boolean) =>{
+  return str.substr(1)
+} else{
+  return str.slice(0,-1);
+}
+console.log(deleteOne("Test, 20"));
+*/
+
 /*
 function deleteOne(str, str2) {
   if (str2 === true) {
@@ -120,7 +120,7 @@ console.log(valori);
 
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
-function onlyLetters() {
+/*function onlyLetters() {
   let str = "Ciao66824";
   console.log(str);
   let matches = numstr.match(/(\d+)/);
@@ -128,8 +128,25 @@ function onlyLetters() {
     console.log(matches[0]);
   }
 }
-console.log(onlyLetters);
-
+console.log(onlyLetters);*/
+const onlyLetters = (string) => {
+  let withoutNumb = "";
+  for (let i = 0; i < string.length; i++) {
+    const currentLetter = string[i];
+    if (
+      currentLetter !== "0" &&
+      currentLetter !== "1" &&
+      currentLetter !== "2" &&
+      currentLetter !== "3" &&
+      currentLetter !== "4"
+    ) {
+      console.log(string[i]);
+      withoutNumb = withoutNumb.concat(currentLetter);
+    }
+  }
+  console.log(withoutNumb);
+};
+onlyLetters("i have 4 dogs");
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
